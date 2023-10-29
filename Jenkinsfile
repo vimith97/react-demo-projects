@@ -13,6 +13,7 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 // Install Node.js and dependencies
+                sh 'cd /root/.jenkins/workspace/react-project/Password Generator'
                 sh 'npm install'
             }
         }
@@ -20,7 +21,6 @@ pipeline {
         stage('Build') {
             steps {
                 // Build the React.js project
-                sh 'cd /root/.jenkins/workspace/react-project/Password Generator'
                 sh 'npm run build'
             }
         }
