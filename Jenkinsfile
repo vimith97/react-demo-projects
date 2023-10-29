@@ -20,7 +20,6 @@ pipeline {
         stage('Build') {
             steps {
                 // Build the React.js project
-                sh 'cd /root/.jenkins/workspace/react-project/Password Generator'
                 sh 'npm run build'
             }
         }
